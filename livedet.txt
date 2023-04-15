@@ -1,0 +1,15 @@
+    #im1 = cv2.imread('D:\Programs\Major project\Raspi\\bi.jpg')
+
+   
+    #print("\nPress e to infer or q to quit ")
+
+    # while True:
+    #     ret, frame = cam.read()
+    #     cv2.imshow("test", frame)
+    #     if cv2.waitKey(25) & 0xFF == ord('q'):
+    #         break
+    #     if cv2.waitKey(25) & 0xFF == ord('e'):
+    #         results = model(frame)
+    #         res_dict = res_dict.pandas().results[0].to_json(orient="records")
+
+    #         print(res_dict)
