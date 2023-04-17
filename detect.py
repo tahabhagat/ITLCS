@@ -4,7 +4,9 @@ import get_results
 import numpy as np
 
 def load_model(path = 'weights/best.pt'):
-    model = torch.hub.load('ultralytics/yolov5', 'custom', path = 'weights/best.pt')
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5s', 
+                           #path = 'weights/best.pt'
+                           )
     return model
 
 def get_count(img:np.ndarray, model) -> dict:

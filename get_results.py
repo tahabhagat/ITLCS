@@ -12,7 +12,7 @@ def extract_results(result)->dict:
     result_lst = get_list(result)
 
     # Even index contains count of class while the odd index contains the name of the class
-    for ind in range(0, len(result_lst),2):
+    for ind in range(0, len(result_lst), 2):
 
         # Remove extra characters from string to get the correct class labels
         class_name = get_labels(result_lst[ind+1])
@@ -34,14 +34,15 @@ def get_labels(rawClass_name:str)->str:
     class_name = rawClass_name[:-1] if rawClass_name[-1] == ',' else rawClass_name
 
     # To remove the s at the end to get the accurate class name
-    if 'Bus' != class_name:
+    if 'bus' != class_name:
         class_name = class_name[:-1] if class_name[-1] == 's' else class_name
 
 
     return class_name
 
 def get_list(raw_result)->list:
-
+    class_list = 'cars,trucks,buss,motorcycles,bicycles,car,truck,bus,motorcycle,bicycle,'
+    trimmed_result_list = []
     """
         Takes the model result as input and returns a list containing only the class names
         and the count of each class
@@ -61,5 +62,12 @@ def get_list(raw_result)->list:
     # 1. ['7', 'space-emptys,', '6', 'space-occupieds'] OR
     # 2. ['13', 'space-occupieds']                      OR
     # 3. ['13', 'space-emptys']
+    for index in range(len(result_lst)):
+        if result_lst[index] in class_list:
+            trimmed_result_list.append(result_lst[index-1]) 
+            trimmed_result_list.append(result_lst[index]) 
 
-    return result_lst
+
+
+
+    return trimmed_result_list
