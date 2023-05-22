@@ -15,11 +15,7 @@ def get_count(img:np.ndarray, model) -> dict:
     res_dict = get_results.extract_results(results)
     return res_dict
 
-
-
+# path = "night.jpg"
+# cv2.imread(path)
 # model = load_model()
-# im1 = cv2.imread('D:\Programs\Major project\Raspi\\bi.jpg')
-# im2 = cv2.imread('D:\Programs\Major project\Raspi\\57.jpg')
-# print(get_count(im1,model))
-# print(get_count(im2,model))
-
+# get_count(path, model)
