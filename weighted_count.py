@@ -35,7 +35,7 @@ def check_threshold(decayed_weight_lst):
         check_threshold[i] = -1
     elif decayed_weight_lst[i] >=config.upper_threshold:
         check_threshold[i] = 1
-    return check_threshold
+  return check_threshold
 #print (weight_decay())
 # Credits- Atharva Kalbhor
 # Copyrights @AK_47
